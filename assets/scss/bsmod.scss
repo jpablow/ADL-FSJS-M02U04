@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$font-family-base: 'Roboto', sans-serif;
+
+// scss-docs-start theme-color-variables
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+$jpw:           #d63384;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "jpw":        $jpw
+) !default;
+// scss-docs-end theme-colors-map
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.jpw-bg-dark {
+    @extend .bg-dark;
+    color: $jpw;
+}
+
+.jpw-text-light {
+    @extend .text-light;
+    font-style: italic;
+}
